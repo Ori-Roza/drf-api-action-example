@@ -1,0 +1,2 @@
+[tool.pytest.ini_options]
+addopts = " --ds config.settings -p drf_api_action_example_tests.plugin"
