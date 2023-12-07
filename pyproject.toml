@@ -3,7 +3,7 @@ name = "drf_api_action"
 description = "use the power of restframework also as a library functions"
 version = "1.0.6"
 readme = "README.md"
-dependencies = ["Django~=4.2.8", "djangorestframework~=3.14.0", "pytest~=7.4.3", "drf-api-action~=1.0.6", "pytest-django~=4.7.0]"]
+dependencies = ["Django~=4.2.8", "djangorestframework~=3.14.0", "pytest~=7.4.3", "drf-api-action~=1.0.7", "pytest-django~=4.7.0]"]
 
 [tool.pytest.ini_options]
 addopts = " --ds config.settings -p drf_api_action_example_tests.plugin"
