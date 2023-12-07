@@ -1,2 +1,2 @@
-# drf-api-action-eample
+# drf-api-action-example
 example of using drf-api-action
