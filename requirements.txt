@@ -1,5 +1,5 @@
 Django~=4.2.8
 djangorestframework~=3.14.0
 pytest~=7.4.3
-drf-api-action~=1.0.7
+drf-api-action~=1.0.8
 pytest-django~=4.7.0
