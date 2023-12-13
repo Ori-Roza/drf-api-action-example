@@ -18,8 +18,9 @@ def test_add_user(users_api):
 
 
 def test_add_user_exception_on_age(users_api):
-    with pytest.raises(ValidationError):
+    with pytest.raises(ValidationError) as error:
         users_api.add(first_name='bar', last_name='baz', age=150)
+    assert "Ensure this value is less than or equal to 120" in str(error.value)
 
 
 def test_get_users_by_name(users_api):
