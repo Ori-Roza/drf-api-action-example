@@ -20,7 +20,7 @@ class UsersViewSet(APIRestMixin, mixins.RetrieveModelMixin,
                 url_path='/',
                 url_name='users/',
                 serializer_class=serializers.GetUserDetailsSerializer)
-    def details(self, request, **kwargs):
+    def get_user_details(self, request, **kwargs):
         """
         returns user details, pk expected
         """
@@ -32,7 +32,7 @@ class UsersViewSet(APIRestMixin, mixins.RetrieveModelMixin,
                 url_path='/',
                 url_name='users/',
                 serializer_class=serializers.AddUserSerializer)
-    def add(self, request, **kwargs):
+    def add_user(self, request, **kwargs):
         """
         adds new user
         """

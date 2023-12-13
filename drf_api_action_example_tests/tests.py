@@ -8,18 +8,18 @@ from drf_api_action_example_tests.fixtures import users_api
 def test_get_user_details(users_api):
     user = UserFactory(first_name='shosho', last_name='bobo', age=30)
     assert user
-    user_details = users_api.details(pk=user.id)
+    user_details = users_api.get_user_details(pk=user.id)
     assert user_details['first_name'] == user.first_name
 
 
 def test_add_user(users_api):
-    output = users_api.add(first_name='bar', last_name='baz', age=30)
+    output = users_api.add_user(first_name='bar', last_name='baz', age=30)
     assert output['id'] is not None
 
 
 def test_add_user_exception_on_age(users_api):
     with pytest.raises(ValidationError) as error:
-        users_api.add(first_name='bar', last_name='baz', age=150)
+        users_api.add_user(first_name='bar', last_name='baz', age=150)
     assert "Ensure this value is less than or equal to 120" in str(error.value)
 
 
