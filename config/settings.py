@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'drf_api_action_example.users'
+    'drf_api_action_example.users',
+    'drf_api_action_example.tasks'
 ]
 
 MIDDLEWARE = [
